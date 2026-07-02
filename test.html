@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>지구과학 탐구 아카이브</title>
+  <style>
+    :root{
+      --bg: #f4f8fb;
+      --card: #ffffff;
+      --text: #16324a;
+      --muted: #4c667a;
+      --accent: #2f7db8;
+      --accent-dark: #225d89;
+      --line: #d7e4ee;
+      --shadow: 0 14px 30px rgba(22, 50, 74, 0.10);
+      --radius: 22px;
+    }
+
+    *{
+      box-sizing: border-box;
+    }
+
+    html, body{
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180deg, #eef5fb 0%, #f9fbfd 100%);
+      color: var(--text);
+      font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.7;
+    }
+
+    body{
+      min-height: 100vh;
+    }
+
+    .wrap{
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 36px 0 56px;
+    }
+
+    .hero{
+      background: linear-gradient(135deg, #dff0ff 0%, #f8fbff 100%);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 36px 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+
+    .hero .tag{
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      background: #e8f4ff;
+      border: 1px solid #c9e3f8;
+      padding: 8px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    h1{
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle{
+      margin: 0;
+      font-size: clamp(1.08rem, 2.2vw, 1.4rem);
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .section-title{
+      font-size: clamp(1.4rem, 2.6vw, 2rem);
+      margin: 14px 0 18px;
+      padding-left: 4px;
+    }
+
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 22px;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .card h2{
+      margin: 0 0 18px;
+      font-size: clamp(1.45rem, 2.6vw, 2rem);
+      line-height: 1.3;
+    }
+
+    .info{
+      display: grid;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .item{
+      background: #f8fbfe;
+      border: 1px solid #e1ebf3;
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+
+    .label{
+      display: block;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--accent-dark);
+      margin-bottom: 6px;
+    }
+
+    .text{
+      margin: 0;
+      font-size: 1.08rem;
+      color: var(--text);
+    }
+
+    .spacer{
+      flex: 1;
+    }
+
+    .btn{
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 1.08rem;
+      font-weight: 800;
+      padding: 14px 18px;
+      border-radius: 14px;
+      transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 8px 18px rgba(47, 125, 184, 0.22);
+    }
+
+    .btn:hover,
+    .btn:focus{
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .footer{
+      margin-top: 28px;
+      padding: 0 4px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    @media (max-width: 640px){
+      .wrap{
+        width: min(100% - 20px, 1100px);
+        padding-top: 20px;
+        padding-bottom: 36px;
+      }
+
+      .hero{
+        padding: 26px 18px;
+        border-radius: 22px;
+      }
+
+      .card{
+        padding: 18px;
+        border-radius: 18px;
+      }
+
+      .item{
+        padding: 12px 14px;
+      }
+
+      .btn{
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="tag">영재 탐구 산출물 아카이브</div>
+      <h1>지구과학 탐구 아카이브</h1>
+      <p class="subtitle">다양한 지구에서 발생하는 자연현상을 알아봅시다.</p>
+    </section>
+
+    <h2 class="section-title">탐구 산출물 목록</h2>
+
+    <section class="grid">
+      <article class="card">
+        <h2>달의 위상변화</h2>
+        <div class="info">
+          <div class="item">
+            <span class="label">탐구 질문</span>
+            <p class="text">달은 매일 비슷한 모습으로 보이지 않고, 왜 초승달에서 보름달로 다시 바뀌는 것처럼 보일까?</p>
+          </div>
+          <div class="item">
+            <span class="label">사고 흔적</span>
+            <p class="text">태양, 지구, 달의 위치 관계를 떠올리며 관찰 기록을 비교해 보았고, 달이 스스로 빛나는 것이 아니라는 점에 주목해 위상 변화를 설명해 보았다.</p>
+          </div>
+          <div class="item">
+            <span class="label">열린 결론</span>
+            <p class="text">달의 위상은 보는 위치와 천체의 상대적 배열에 따라 달라진다고 볼 수 있으며, 실제 관측을 더하면 변화 주기를 더욱 정확하게 이해할 수 있다.</p>
+          </div>
+        </div>
+        <div class="spacer"></div>
+        <a href="test.html" target="_blank" rel="noopener" class="btn">산출물 열기</a>
+      </article>
+    </section>
+
+    <p class="footer">각 카드는 교사가 쉽게 수정할 수 있도록 자연스러운 예시 문장으로 구성되어 있습니다.</p>
+  </main>
+</body>
+</html>
